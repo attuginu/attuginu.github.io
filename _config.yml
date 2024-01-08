@@ -6,7 +6,7 @@ baseurl:            ""
 url:                "https://attuginu.github.io"
 
 # Social Profiles
-twitter_username:   wattuginu
+twitter_username:   
 github_username:    attuginu
 facebook_username:  
 instagram_username:  
@@ -23,3 +23,4 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+highlighter: rouge
