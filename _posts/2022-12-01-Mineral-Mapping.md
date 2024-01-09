@@ -6,11 +6,11 @@ background: '/img/posts/2022-12-01-Mineral-Mapping/bg.png'
 ---
 
 # Latar Belakang
-Proyek ini merupakan soal UAS Geokimia Eksplorasi, di mana diberikan 2 dataset: [Soil Sample Data, Stream Sediment Data]. Perlu diketahui bahwa dalam eksplorasi Cu-Au, Stream Sediment Sampling (SSS) dilakukan terlebih dahulu, baru kemudian Soil Sampling (SS) akan dilakukan pada area yang lebih berpotensi yang diketahui dari SSS. Ujian ini memberikan 2 tugas utama: [Lakukan klasterisasi data (minimal 3 klaster), Buat Peta Anomali Tiap unsur].  
+<p style="text-align:justify">Proyek ini merupakan soal UAS Geokimia Eksplorasi, di mana diberikan 2 dataset: [Soil Sample Data, Stream Sediment Data]. Perlu diketahui bahwa dalam eksplorasi Cu-Au, Stream Sediment Sampling (SSS) dilakukan terlebih dahulu, baru kemudian Soil Sampling (SS) akan dilakukan pada area yang lebih berpotensi yang diketahui dari SSS. Ujian ini memberikan 2 tugas utama: [Lakukan klasterisasi data (minimal 3 klaster), Buat Peta Anomali Tiap unsur].</p>
 
 # Metode
-Klasterisasi akan menggunakan pendekatan principal component analysis (PCA) dan k-means clustering (KMC)
-sedangkan peta anomali akan menggunakan aplikasi surfer untuk menginterpolasi data
+<p style="text-align:justify">Klasterisasi akan menggunakan pendekatan principal component analysis (PCA) dan k-means clustering (KMC)
+sedangkan peta anomali akan menggunakan aplikasi surfer untuk menginterpolasi data.</p>
 
 # Output
 ## A. Deskripsi Data
@@ -162,7 +162,7 @@ plt.show()
 
 ## B. Principal Component Analysis
 
-pada proses ini, akan dilakukan reduksi dimensi, sehingga hanya terdapat beberapa parameter yang memiliki explained variance >70%. Dalam hal ini, data SSS membutuhkan 4 principal component (PC), sedangkan data SS membutuhkan 3 PC saja.
+<p style="text-align:justify">pada proses ini, akan dilakukan reduksi dimensi, sehingga hanya terdapat beberapa parameter yang memiliki explained variance >70%. Dalam hal ini, data SSS membutuhkan 4 principal component (PC), sedangkan data SS membutuhkan 3 PC saja.</p>
 
 
 ```python
@@ -328,8 +328,8 @@ data_pca_ss = pd.DataFrame(data=componentss, columns=['PC1', 'PC2', 'PC3'])
 
 
 ## C. K-Means Clustering
-data akan dibagi menjadi beberapa klaster (minimal 3) menggunakan algoritma KMC
-Berdasarkan nilai silhouette score terbesar, data SSS memiliki jumlah klaster ideal 4, sedangkan data SS sejumlah 5.
+<p style="text-align:justify">Data akan dibagi menjadi beberapa klaster (minimal 3) menggunakan algoritma KMC
+Berdasarkan nilai silhouette score terbesar, data SSS memiliki jumlah klaster ideal 4, sedangkan data SS sejumlah 5.</p>
 
 ### 1. Memeriksa Jumlah Klaster ideal
 
@@ -567,9 +567,9 @@ kmc("soil sampling", soiln, soilm, loadingss, data_pca_ss, 5, cosoil)
 </figure> 
     
 
-Dari plot stream sediment sampling, dapat diketahui bahwa data terbagi menjadi 4 klaster, di mana klaster 1 dan 3 memiliki trend searah dengan unsur Cu, Pb, Zn. sedangkan klaster 1 tersebar merata mengikuti trend unsur Cu-Pb-Zn dan trend Au-As-Ag-Sb. Klaster 2 merupakan anomali
+<p style="text-align:justify">Dari plot stream sediment sampling, dapat diketahui bahwa data terbagi menjadi 4 klaster, di mana klaster 1 dan 3 memiliki trend searah dengan unsur Cu, Pb, Zn. sedangkan klaster 1 tersebar merata mengikuti trend unsur Cu-Pb-Zn dan trend Au-As-Ag-Sb. Klaster 2 merupakan anomali. </p>
 
-Pada plot soil sampling, dapat diketahui klaster 0 memiliki 2 arah trend, yakni yang positif dengan unsur Cu-Ag-Zn dan Au-Sb-Pb. sedangkan klaster lainnya positif dengan unsur Au-Sb-Pb.
+<p style="text-align:justify">Pada plot soil sampling, dapat diketahui klaster 0 memiliki 2 arah trend, yakni yang positif dengan unsur Cu-Ag-Zn dan Au-Sb-Pb. sedangkan klaster lainnya positif dengan unsur Au-Sb-Pb.</p>
 
 ## 2. Peta Anomali
 ### A. Peta Anomali Data Stream Sediment Sampling
